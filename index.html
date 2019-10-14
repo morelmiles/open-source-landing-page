@@ -222,7 +222,6 @@
   <script src="./js/slick.min.js"></script>
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/jquery.js"></script>
   <script type="text/javascript">
     $('.autoplay').slick({
       slidesToShow: 1,
@@ -236,9 +235,11 @@
 
     function gotoTop(){
 
-      $('html, body').animate({
-          scrollTop:0
-        }, 1000);
+      window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth' 
+      });
 
     }
   </script>

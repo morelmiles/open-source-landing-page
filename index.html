@@ -12,6 +12,8 @@
   <link rel="stylesheet" type="text/css" href="./css/slick.css" />
   <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
   <link rel="stylesheet" href="css/animate.min.css">
+
+  
 </head>
 
 <body>
@@ -212,6 +214,7 @@
   </div>
   
   <script src="./js/jquery-3.3.1.slim.min.js"></script>
+  
   <script src="js/wow.min.js"></script>
   <script>
     new WOW().init();
@@ -229,7 +232,22 @@
       dots: false,
       autoplaySpeed: 2000,
     });
+
+    function gotoTop(){
+
+      window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth' 
+      });
+
+    }
   </script>
+
+
+  <button id="return-to-top" onclick="gotoTop()">^
+
+
 </body>
 
 </html>

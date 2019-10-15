@@ -13,11 +13,17 @@
   <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
   <link rel="stylesheet" href="css/animate.min.css">
 
-  
+
 </head>
 
 <body>
-
+  <!-- PreLoader -->
+  <div class="spinner-wrapper">
+    <div class="spinner">
+      <div class="cube1"></div>
+      <div class="cube2"></div>
+    </div>
+  </div>
 
   <!-- Navbar -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -86,7 +92,7 @@
   <div class="section section-1 p-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 wow slideInLeft" data-wow-duration="1s" >
+        <div class="col-md-6 wow slideInLeft" data-wow-duration="1s">
           <img class="" src="./img/f18e8e57-66ed-4d36-82f6-b196778f9118.jpg" style="max-width: 100%">
         </div>
         <div class="col-md-6 wow slideInRight" data-wow-duration="1s">
@@ -212,9 +218,9 @@
     </div>
 
   </div>
-  
-  <script src="./js/jquery-3.3.1.slim.min.js"></script>
-  
+
+  <script src="./js/jquery-3.4.1.min.js"></script>
+
   <script src="js/wow.min.js"></script>
   <script>
     new WOW().init();
@@ -233,17 +239,31 @@
       autoplaySpeed: 2000,
     });
 
-    function gotoTop(){
+    function gotoTop() {
 
       window.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth' 
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
       });
 
     }
   </script>
 
+  <!-- JQuery Function to make preloader work -->
+  <script>
+    $(document).ready(function () {
+      //Preloader
+      $(window).on("load", function () {
+        preloaderFadeOutTime = 3000;
+        function hidePreloader() {
+          var preloader = jQuery('.spinner-wrapper');
+          preloader.fadeOut(preloaderFadeOutTime);
+        }
+        hidePreloader();
+      });
+    });
+  </script>
 
   <button id="return-to-top" onclick="gotoTop()">^
 

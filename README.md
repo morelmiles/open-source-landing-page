@@ -2,4 +2,6 @@
 Free and Open source HTML Landing Page
 
 ## Contributors
-All Sefaresh.Net Programmers
+<a href="https://github.com/jyarali/open-source-landing-page/graphs/contributors">
+  <img src="https://contributors-img.firebaseapp.com/image?repo=jyarali/open-source-landing-page" />
+</a>
